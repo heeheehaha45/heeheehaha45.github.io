@@ -32,7 +32,7 @@
         
         
     <div id="keyboard" >
-        <div class="container" style="float:left;background:black;height:1000px;overflow:scroll">
+        <div class="container" style="float:left;background:black;height:1000px;">
             <div style="float:left;margin-top:70px;">
 
                 <div class="button">
@@ -89,6 +89,13 @@
                 </div>
 
             </div>
+             <div style="float:left;background:black;margin-top:70px;">
+
+                <div class="button" style="padding-top:230px;margin-left:2px;height:250px;width:50px">
+                <span>space</span>
+                </div>
+            
+            </div>
         </div>
         
         
@@ -118,6 +125,12 @@
                 </div>
                 <div class="button">
                 <span>M</span>
+                </div>
+                <div class="button">
+                <span></span>
+                </div>
+                <div class="button">
+                <span></span>
                 </div>
 
             </div>
@@ -151,10 +164,13 @@
                 <div class="button">
                 <span>/</span>
                 </div>
-                <div class="button">
-                <span>SPACE</span>
-                </div>
+      
 
+            </div>
+            <div style="float:right;background:black;margin-top:70px;">
+                 <div class="button" style="padding-top:230px;margin-right:2px;height:310px;width:50px">
+                     <span>back</span>
+                </div>
             </div>
         </div>
   </div>
@@ -162,8 +178,17 @@
   </body>
     <script>
         $("#keyboard .button").on("click touchstart",function(e){
-            var char=$(this).text() ;
-           $("#text").append(   char );
+            var char=$(this).text().trim() ;
+//            console.log(char);
+            if(char=="space")
+                $("#text").append( " " );
+            else if(char=="back"){
+                var str=$("#text").text().trim();
+                str=str.slice(0, -1);
+                 $("#text").text(   str );
+            }
+            else
+                $("#text").append(   char );
           
             e.preventDefault(); 
         })
