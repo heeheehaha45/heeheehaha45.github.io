@@ -159,10 +159,11 @@
     
   </body>
     <script>
-        $("#keyboard .button").on("click touchstart",function(){
+        $("#keyboard .button").on("click touchstart",function(e){
             var char=$(this).text() ;
            $("#text").append(   char );
-            
+          
+            e.preventDefault(); 
         })
     </script>
     
