@@ -154,7 +154,8 @@
   </body>
     <script>
         $("#keyboard .button").click(function(){
-           $("#text").html(   $("#text").html()+$(this).text()    );
+            var char=$(this).text() ;
+           $("#text").append(   char );
             
         })
     </script>
