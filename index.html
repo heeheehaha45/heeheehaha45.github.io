@@ -159,7 +159,7 @@
     
   </body>
     <script>
-        $("#keyboard .button").mouseup(function(){
+        $("#keyboard .button").on("click touchstart",function(){
             var char=$(this).text() ;
            $("#text").append(   char );
             
