@@ -35,11 +35,11 @@
         <div class="container" style="float:left;background:black;height:1000px;overflow:display">
             <div style="float:left;">
 
-                <div data-value='Q' accesskey=""class="button">
-                <button role="button" type="button"><span>Q</span></button>
+                <div class="button">
+                <button data-value='Q' role="button" type="button"><span>Q</span></button>
                 </div>
-                <div data-value='W' class="button">
-                <span  >W</span>
+                <div class="button">
+                <span  data-value='Q'>W</span>
                 </div>
                 <div class="button">
                 <span>A</span>
@@ -159,8 +159,8 @@
     
   </body>
     <script>
-        $("#keyboard .button").click(function(){
-            var char=$(this).data("value") ;
+        $("#keyboard .button").mouseup(function(){
+            var char=$(this).text() ;
            $("#text").append(   char );
             
         })
