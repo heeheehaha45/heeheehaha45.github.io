@@ -1551,6 +1551,7 @@ a#previous {
   left: 3.2rem;
 }
 @media (max-width:1024px) {
+/*
   #navigation {
     background: url('../images/swipe.svg') no-repeat center top;
     background-size: 4.8rem;
@@ -1559,6 +1560,7 @@ a#previous {
   }
   #navigation a, #counter {display: none;
   }
+*/
 }
 
 /*=== 5.3 Slides - Background Images === */
